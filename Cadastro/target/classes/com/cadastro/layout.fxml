@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="painelPrincipal" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.cadastro.CadastroController">
+   <children>
+      <Label fx:id="nomeLabel" layoutX="50.0" layoutY="50.0" text="Nome:" />
+      <TextField fx:id="NomeField" layoutX="150.0" layoutY="45.0" prefHeight="25.0" prefWidth="300.0" promptText="Nome" />
+
+      <Label fx:id="emailLabel" layoutX="50.0" layoutY="100.0" text="E-mail:" />
+      <TextField fx:id="emailField" layoutX="150.0" layoutY="95.0" prefHeight="25.0" prefWidth="300.0" promptText="E-mail" />
+
+      <Label fx:id="telefoneLabel" layoutX="50.0" layoutY="150.0" text="Telefone:" />
+      <TextField fx:id="TelefoneField" layoutX="150.0" layoutY="145.0" prefHeight="25.0" prefWidth="300.0" promptText="Telefone" />
+
+      <Button fx:id="btnSalvar" layoutX="50.0" layoutY="200.0" mnemonicParsing="false" onAction="#salvarContato" text="Salvar" />
+      <Button fx:id="btnLimpar" layoutX="150.0" layoutY="200.0" mnemonicParsing="false" onAction="#limparContato" text="Limpar" />
+      <Button fx:id="btnExcluir" layoutX="250.0" layoutY="200.0" mnemonicParsing="false" onAction="#excluirCliente" text="Excluir" />
+      <Button fx:id="btnSair" layoutX="350.0" layoutY="200.0" mnemonicParsing="false" onAction="#fecharTela" text="Sair" />
+
+      <Label fx:id="mensagemLabel" layoutX="50.0" layoutY="250.0" text="Mensagem:" />
+
+      <TableView fx:id="tableClientes" layoutX="50.0" layoutY="300.0" prefHeight="250.0" prefWidth="700.0">
+         <columns>
+            <TableColumn fx:id="colunaId" prefWidth="50.0" text="ID" />
+            <TableColumn fx:id="colunaNome" prefWidth="200.0" text="Nome" />
+            <TableColumn fx:id="colunaEmail" prefWidth="200.0" text="Email" />
+            <TableColumn fx:id="colunaTelefone" prefWidth="200.0" text="Telefone" />
+         </columns>
+      </TableView>
+   </children>
+</AnchorPane>
